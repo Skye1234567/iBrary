@@ -20,7 +20,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +32,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import ca.rededaniskal.BusinessLogic.AddBookLogic;
 
 
-import ca.rededaniskal.Database.AddBookDb;
 import ca.rededaniskal.EntityClasses.Book_Instance;
 
 import ca.rededaniskal.Barcode.Barcode_Scanner_Activity;
