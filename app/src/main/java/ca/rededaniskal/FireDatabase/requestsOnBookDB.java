@@ -1,4 +1,4 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 import android.util.Log;
 
@@ -12,7 +12,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import ca.rededaniskal.Activities.Book_Details_Activity;
-import ca.rededaniskal.EntityClasses.Book;
 import ca.rededaniskal.EntityClasses.Book_Instance;
 import ca.rededaniskal.EntityClasses.BorrowRequest;
 import ca.rededaniskal.EntityClasses.User;

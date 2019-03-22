@@ -16,8 +16,8 @@ package ca.rededaniskal.BusinessLogic;
 import java.lang.String;
 
 
-import ca.rededaniskal.Database.Add_Book_Db;
-import ca.rededaniskal.Database.EditBookDb;
+import ca.rededaniskal.FireDatabase.Add_Book_Db;
+import ca.rededaniskal.FireDatabase.EditBookDb;
 import ca.rededaniskal.EntityClasses.Book_Instance;
 
 import static com.google.android.gms.common.util.ArrayUtils.contains;

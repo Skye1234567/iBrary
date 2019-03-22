@@ -19,32 +19,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-import java.util.List;
 
 import ca.rededaniskal.Activities.Login_Activity;
 import ca.rededaniskal.BusinessLogic.Notification_Adapter;
 import ca.rededaniskal.EntityClasses.Notification;
-import ca.rededaniskal.EntityClasses.Request;
-import ca.rededaniskal.EntityClasses.User;
 import ca.rededaniskal.R;
 
-import static android.content.ContentValues.TAG;
-import ca.rededaniskal.Database.getUserRequestsDB;
+import ca.rededaniskal.FireDatabase.getUserRequestsDB;
 
 
 /**

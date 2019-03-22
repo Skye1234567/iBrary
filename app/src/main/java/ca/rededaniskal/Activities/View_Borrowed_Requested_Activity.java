@@ -10,33 +10,17 @@
  */
 package ca.rededaniskal.Activities;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.Switch;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.Map;
 
 import ca.rededaniskal.BusinessLogic.BookAdapter;
 
-import ca.rededaniskal.EntityClasses.Book_Instance;
 import ca.rededaniskal.EntityClasses.Book_List;
 import ca.rededaniskal.R;
-import ca.rededaniskal.Database.ReadBookDB;
+import ca.rededaniskal.FireDatabase.ReadBookDB;
 
 //Author: Revan, Skye
 public class View_Borrowed_Requested_Activity extends AppCompatActivity {

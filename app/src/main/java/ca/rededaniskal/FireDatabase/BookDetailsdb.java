@@ -1,4 +1,4 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 import android.support.annotation.NonNull;
 

@@ -1,7 +1,6 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 import android.util.Log;
-import ca.rededaniskal.Activities.Fragments.View_Own_Profile_Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

@@ -1,6 +1,5 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
-import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,12 +14,12 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import ca.rededaniskal.Activities.Edit_Profile_Activity;
 import ca.rededaniskal.EntityClasses.User;
-import ca.rededaniskal.Activities.Fragments.View_Own_Profile_Fragment;
 
 import static android.content.ContentValues.TAG;
 
-public class currentUserDetailsDB{
+public class editUserDetailsDB{
     private FirebaseAuth mAuth;
     private String email;
     private String username;
@@ -29,11 +28,13 @@ public class currentUserDetailsDB{
     private FirebaseUser user;
     private DatabaseReference mDatabase;
     private List<User> userList;
+    private String key;
     private boolean failed;
-    private View_Own_Profile_Fragment parent;
+    private Edit_Profile_Activity parent;
 
-    public currentUserDetailsDB(View_Own_Profile_Fragment parentFragment) {
-        parent = parentFragment;
+
+    public editUserDetailsDB(Edit_Profile_Activity par) {
+        parent = par;
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         userList = new ArrayList<>();
@@ -48,6 +49,16 @@ public class currentUserDetailsDB{
         }
     }
 
+    public boolean getFailed(){return failed;}
+
+
+    public void saveNewDetails(User user){
+        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+        mDatabase.child(key).setValue(user);
+
+    }
+
+
     private void getUserDetails(){
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         Query query = FirebaseDatabase.getInstance().getReference("Users")
@@ -56,7 +67,6 @@ public class currentUserDetailsDB{
 
         Log.d(TAG, "*********----->"+email);
         query.addListenerForSingleValueEvent(valueEventListener);
-
     }
 
     ValueEventListener valueEventListener = new ValueEventListener() {
@@ -68,7 +78,10 @@ public class currentUserDetailsDB{
                 Log.d(TAG, "*********----->exists");
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     //Log.d(TAG, "*********----->"+snapshot.getValue());
+                    key = snapshot.getKey();
+                    Log.d(TAG, "*********----->ID: "+key);
                     User user = snapshot.getValue(User.class);
+
                     parent.setTexts(user.getEmail(), user.getPhoneNumber(), user.getLocation(), user.getUserName());
                 }
             }
@@ -77,10 +90,6 @@ public class currentUserDetailsDB{
 
         @Override
         public void onCancelled(DatabaseError databaseError) {
-
         }
     };
-
-    public boolean getFailed(){return failed;}
-
 }

@@ -8,7 +8,7 @@
  */
 package ca.rededaniskal.BusinessLogic;
 
-import ca.rededaniskal.Database.Get_All_Books_Data;
+import ca.rededaniskal.FireDatabase.Get_All_Books_Data;
 
 public class Load_ALL_Books_Business {
 

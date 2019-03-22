@@ -1,4 +1,4 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 /*author Skye*/
 //Interacts with the Firebase when a user adds a book to ther library
 import android.util.Log;

@@ -1,10 +1,8 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 /*author: Skye*/
 //SCRATCH PAD FOR DATABASE-------> Not real, just figuring things out.
 
 import java.util.HashMap;
-
-import ca.rededaniskal.EntityClasses.Master_Book;
 
 
 public class Data_Map {

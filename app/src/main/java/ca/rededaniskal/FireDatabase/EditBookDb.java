@@ -1,4 +1,4 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;

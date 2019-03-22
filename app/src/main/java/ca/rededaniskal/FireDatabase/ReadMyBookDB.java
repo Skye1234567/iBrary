@@ -1,4 +1,4 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -12,17 +12,18 @@ import com.google.firebase.database.ValueEventListener;
 
 import ca.rededaniskal.EntityClasses.Book_Instance;
 import ca.rededaniskal.EntityClasses.Book_List;
-import ca.rededaniskal.Activities.View_Borrowed_Requested_Activity;
+import ca.rededaniskal.Activities.View_My_Library_Activity;
 
-public class ReadBookDB {
+public class ReadMyBookDB {
+
     private DatabaseReference mdatabase;
-    private String TAG;
-    private View_Borrowed_Requested_Activity parent;
+    String TAG;
+    View_My_Library_Activity parent;
 
-
-    public ReadBookDB(View_Borrowed_Requested_Activity p){
-        parent = p;
+    public ReadMyBookDB(View_My_Library_Activity p){
         update();
+        parent = p;
+
     }
 
 
@@ -44,7 +45,6 @@ public class ReadBookDB {
                     Book_Instance book_instance = snapshot.getValue(Book_Instance.class);
                     Log.d(TAG, "**************--->"+book_instance.getOwner());
                     book_list.addBook(book_instance);
-
                 }
                 parent.updateBookView(book_list);
             }

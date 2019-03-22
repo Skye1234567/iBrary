@@ -1,10 +1,9 @@
-package ca.rededaniskal.Database;
+package ca.rededaniskal.FireDatabase;
 
 /*author: Skye*/
 
 //SCRATCH PAD FOR DATABASE-------> Not real, just figuring things out.
 
-import com.google.firebase.FirebaseError;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
